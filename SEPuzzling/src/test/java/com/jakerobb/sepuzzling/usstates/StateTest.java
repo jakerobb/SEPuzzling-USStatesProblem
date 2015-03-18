@@ -2,10 +2,16 @@ package com.jakerobb.sepuzzling.usstates;
 
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class StateTest {
+    @Test
+    public void testAllStatesPresent() throws Exception {
+        assertEquals(50, State.values().length);
+    }
+
     @Test
     public void testCoincidentLettersCheck() throws Exception {
         assertTrue(State.ALABAMA.hasCoincidentLetters(State.ALASKA)); // the A
