@@ -6,6 +6,12 @@ import com.google.common.collect.Iterables;
 import java.util.Collection;
 
 public class StateList {
+    private static int nodeCount = 0;
+
+    public static int getNodeCount() {
+        return nodeCount;
+    }
+
     private final ImmutableList<State> states;
 
     private StateList() {
@@ -13,6 +19,7 @@ public class StateList {
     }
 
     private StateList(Iterable<State> states) {
+        nodeCount++;
         this.states = ImmutableList.copyOf(states);
     }
 

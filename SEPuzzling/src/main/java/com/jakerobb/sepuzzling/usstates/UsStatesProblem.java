@@ -5,7 +5,7 @@ public class UsStatesProblem {
         long start = System.nanoTime();
         StateList longest = findLongest(StateList.empty());
         long end = System.nanoTime();
-        System.out.printf("Computed longest in %s seconds: %s%n", (end - start) / 1000000000.0, longest);
+        System.out.printf("Discovered %d valid chains in %f seconds.  Longest: %s%n", StateList.getNodeCount(), (end - start) / 1000000000.0, longest);
     }
 
     private static StateList findLongest(StateList list) {
